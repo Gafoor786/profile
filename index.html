@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template</title>
+    <style>
+        @font-face {
+            font-family: KONE;
+            src: url('https://www.kone.com/fonts/KONE_Information.woff2') format("woff2");
+        }
+
+        * {
+            font-family: KONE;
+        }
+
+        html {
+            font-size: 50%;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: KONE;
+            color: #3b4245;
+            font-size: 19px;
+            font-size: 1.9rem;
+            line-height: 1.3;
+            overflow-x: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px 15px;
+        }
+    </style>
+    <script>
+        function replaceHtml() {
+            const container = document.getElementById('container');
+            let content = `<style>
+        @font-face {
+            font-family: KONE;
+            src: url('https://www.kone.com/fonts/KONE_Information.woff2') format("woff2");
+        }
+
+        * {
+            font-family: KONE;
+        }
+
+        html {
+            font-size: 50%;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: KONE;
+            color: #3b4245;
+            font-size: 19px;
+            font-size: 1.9rem;
+            line-height: 1.3;
+            overflow-x: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px 15px;
+        }
+    </style>
+    <div id="container" style=" max-width: 600px; margin: 0 auto;"> <img
+            src="https://www.kone.com/en/Images/kone-logo-76x52_tcm17-8930.png?v=4" alt="">
+        <h4>KONE SoundLight<sup>TM</sup></h4>
+        <div style=" padding: 5px 15px; border: 1px solid #0071b9; border-top: 4px solid #0071b9; ">
+            <p>Dear @@userId,</p>
+            <h3>Welcome to KONE SoundLight<sup>TM</sup></h3>
+            <p>Control the lights and sound to create needed ambience and redefined user experience inside the elevator
+                is just away from your login!</p>
+            <div style=" display: flex;width: 100%; ">
+                <div style=" width: 50%; ">
+                    <p>Web app</p> <a style=" display: block; padding: 15px 0; color: #3b4245; "
+                        href="http://india-dx.eu-gb.mybluemix.net/ ">http://india-dx.eu-gb.mybluemix.net/
+                    </a> <button>Click</button>
+                </div>
+                <div style=" width: 1px; background: #0071b9; margin: -10px 0; top: 8px; position: relative; ">
+                </div>
+                <div style=" text-align: center; width: 50%; ">
+                    <p>Download Android mobile app</p> <a style=" display: block; padding: 15px 0; color: #3b4245; "
+                        href="http://playstore.com/konesoundlight ">http://playstore.com/konesoundlight
+                    </a>
+                    <div style="display: flex;margin: 0 auto;width: max-content;">
+                        <div>qr</div>
+                        <div> <img style=" max-width: 90px; "
+                                src="https://lh3.googleusercontent.com/qF9r3ZjtgG-qyHdmjecArtKiulz1gmwL_xl9R3_fzk6igSeoN0wYbJSKEX5d_fxJRwYZJpHbqcLB3i9atl-9dOfUl9an7U43TfZ9PtQ=s0"
+                                alt=""> </div>
+                    </div>
+                </div>
+            </div>
+            <p><b> Please find your Login credentials </b> </p>
+
+            <div>
+                <div style="width: 100%;display: flex;">
+                    <div
+                        style="width: 50%;border: 1px solid;padding: 2px 10px;    border-bottom: none;border-right: none;">
+                        User ID</div>
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;    border-bottom: none;">
+                        @@userId</div>
+                </div>
+                <div style="width: 100%;display: flex;">
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;border-right: none;">Password</div>
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;">@@password</div>
+                </div>
+                </table>
+            </div>
+            <p style=" padding: 20px 0; ">Feel free to contact KONE for any queries and
+                clarifications. </p>
+            <p> Upload your own music to Elevator is a separate paid service, contact KONE FL for more information </p>
+            <p style=" font-size: 13px; "> Note: Do not share your credentials </p>
+            <p style=" font-size: 13px; "> Regards, </p>
+            <p style=" font-size: 13px; ">Kone team</p>
+        </div>
+    </div>`;
+            const replaceArray = [
+                { key: 'userId', value: 'vino@kone.com' },
+                { key: 'password', value: 'kone@1234' },
+            ]
+            replaceArray.forEach(e => {
+                content = content.replaceAll('@@' + e.key, e.value);
+            })
+            container.innerHTML = content;
+        }
+    </script>
+</head>
+
+<body>
+    <style>
+        @font-face {
+            font-family: KONE;
+            src: url('https://www.kone.com/fonts/KONE_Information.woff2') format("woff2");
+        }
+
+        * {
+            font-family: KONE;
+        }
+
+        html {
+            font-size: 50%;
+        }
+
+        body {
+            background-color: #fff;
+            font-family: KONE;
+            color: #3b4245;
+            font-size: 19px;
+            font-size: 1.9rem;
+            line-height: 1.3;
+            overflow-x: hidden;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 5px 15px;
+        }
+    </style>
+    <div id="container" style=" max-width: 600px; margin: 0 auto;"> <img
+            src="https://www.kone.com/en/Images/kone-logo-76x52_tcm17-8930.png?v=4" alt="">
+        <h4>KONE SoundLight<sup>TM</sup></h4>
+        <div style=" padding: 5px 15px; border: 1px solid #0071b9; border-top: 4px solid #0071b9; ">
+            <p>Dear Ramesh,</p>
+            <h3>Welcome to KONE SoundLight<sup>TM</sup></h3>
+            <p>Control the lights and sound to create needed ambience and redefined user experience inside the elevator
+                is just away from your login!</p>
+            <div style=" display: flex;width: 100%; ">
+                <div style=" width: 50%; ">
+                    <p>Web app</p> <a style=" display: block; padding: 15px 0; color: #3b4245; "
+                        href="http://india-dx.eu-gb.mybluemix.net/ ">http://india-dx.eu-gb.mybluemix.net/
+                    </a> <button>Click</button>
+                </div>
+                <div style=" width: 1px; background: #0071b9; margin: -10px 0; top: 8px; position: relative; ">
+                </div>
+                <div style=" text-align: center; width: 50%; ">
+                    <p>Download Android mobile app</p> <a style=" display: block; padding: 15px 0; color: #3b4245; "
+                        href="http://playstore.com/konesoundlight ">http://playstore.com/konesoundlight
+                    </a>
+                    <div style="display: flex;margin: 0 auto;width: max-content;">
+                        <div>qr</div>
+                        <div> <img style=" max-width: 90px; "
+                                src="https://lh3.googleusercontent.com/qF9r3ZjtgG-qyHdmjecArtKiulz1gmwL_xl9R3_fzk6igSeoN0wYbJSKEX5d_fxJRwYZJpHbqcLB3i9atl-9dOfUl9an7U43TfZ9PtQ=s0"
+                                alt=""> </div>
+                    </div>
+                </div>
+            </div>
+            <p><b> Please find your Login credentials </b> </p>
+
+            <div>
+                <div style="width: 100%;display: flex;">
+                    <div
+                        style="width: 50%;border: 1px solid;padding: 2px 10px;    border-bottom: none;border-right: none;">
+                        User ID</div>
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;    border-bottom: none;">
+                        Ramesh.v@domain.com</div>
+                </div>
+                <div style="width: 100%;display: flex;">
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;border-right: none;">Password</div>
+                    <div style="width: 50%;border: 1px solid;padding: 2px 10px;">Efkwfmfw!2</div>
+                </div>
+                </table>
+            </div>
+            <p style=" padding: 20px 0; ">Feel free to contact KONE for any queries and
+                clarifications. </p>
+            <p> Upload your own music to Elevator is a separate paid service, contact KONE FL for more information </p>
+            <p style=" font-size: 13px; "> Note: Do not share your credentials </p>
+            <p style=" font-size: 13px; "> Regards, </p>
+            <p style=" font-size: 13px; ">Kone team</p>
+        </div>
+    </div>
+    <button onclick="replaceHtml()">replaceHtml</button>
+</body>
+
+</html>
